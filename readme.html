@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ReadMe</title>
+
+	<link rel="stylesheet" href="assets/bootstrap/4.3.1/css/bootstrap.css" type="text/css">
+
+</head>
+<body>
+
+	<div class="container-fluid">
+		
+
+		<div class="card border-dark mt-2 bg-light">
+			<div class="card-header bg-danger text-white">
+				<h3 class="my-0">Parts Replacement Request System v1.0</h3>
+			</div>
+			<div class="card-body">
+				<h3>SYSTEM ENVIRONMENT</h3>
+				<hr>
+
+				<h4 class="font-weight-bold" align="center">Development Environment</h4>
+				<table class="table table-sm table-bordered">
+					<thead class="text-center">
+						<tr>
+							<th colspan="3"><h4>Hardware Specifications</h4></td>
+							</tr>
+							<tr>
+								<th scope="col">Hardware</th>
+								<th scope="col">Specifications</th>
+							</tr>
+						</thead>
+						<tbody class="text-center">
+							<tr>
+								<td scope="col">Platform</td>
+								<td scope="col">Laptop</td>
+							</tr>
+							<tr>
+								<td scope="col">System Information</td>
+								<td scope="col"><img class="img-fluid mx-auto" src="util/res/deven.png" width="50%"></td>
+							</tr>
+						</tbody>
+						<thead class="text-center">
+							<tr>
+								<th colspan="3"><h4>Software Specifications</h4></td>
+								</tr>
+								<tr>
+									<th scope="col">Software</th>
+									<th scope="col">Specifications</th>
+								</tr>
+							</thead>
+							<tbody class="text-center">
+								<tr>
+									<td scope="col">Database</td>
+									<td scope="col">MYSQL, SQL</td>
+								</tr>
+								<tr>
+									<td scope="col">Runtime</td>
+									<td scope="col">XAMPP 3.2.3, MariaDB 4.8.5</td>
+								</tr>
+								<tr>
+									<td scope="col">Text Editor</td>
+									<td scope="col">Sublime Text 3 v3.2</td>
+								</tr>
+								<tr>
+									<td scope="col">Programming Language</td>
+									<td scope="col">PHP 7.3.2</td>
+								</tr>
+								<tr>
+									<td scope="col">Mark-up Language</td>
+									<td scope="col">HTML, CSS</td>
+								</tr>
+								<tr>
+									<td scope="col">Framework</td>
+									<td scope="col">AJAX, JQuery, Bootstrap v4</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h4 class="font-weight-bold" align="center">Deployment Environment</h4>
+						<table class="table table-sm table-bordered">
+							<thead class="text-center">
+								<tr>
+									<th colspan="3"><h4>Server Specifications</h4></td>
+									</tr>
+									<tr>
+										<th scope="col">Database</th>
+										<th scope="col">Specifications</th>
+									</tr>
+								</thead>
+								<tbody class="text-center">
+									<tr>
+										<td scope="col">System Information</td>
+										<td scope="col"><img class="img-fluid mx-auto" src="util/res/depen.png" width="50%"></td>
+									</tr>
+									<tr>
+										<td scope="col">Database Server</td>
+										<td scope="col">MS SQL SERVER 2014</td>
+									</tr>
+									<tr>
+										<td scope="col">Application Server</td>
+										<td scope="col">INTERNET INFORMATION SERVICES (IIS) SERVER</td>
+									</tr>
+									<tr>
+										<td scope="col">Web Platform Version (PHP)</td>
+										<td scope="col">PHP 5.6</td>
+									</tr>
+								</tbody>
+							</table>
+							<hr>
+
+							<h3>PREREQUISITES</h3>
+							<h6 class="font-weight-bold">Connecting to MS SQL</h6>
+							<ul>
+								<div class="row">
+									<div class="col">
+										<li>Must have PDO SQL DRIVER for PHP installed</li>
+										<li>Make sure to use standard SQL queries as some <strong>MYSQL</strong>'s syntax differ in <strong>MS SQL</strong>'s</li>
+									</div>
+									<div class="col">
+										<img src="util/res/pdosql.png" width="70%">
+									</div>
+								</div>
+							</ul>
+							<h6 class="my-0 text-danger">Note: create a <code>phpinfo()</code> display page to view installed drivers</h6>
+							<hr>
+
+							<h6 class="font-weight-bold">Running</h6>
+							<ul>
+								<li>Google Chrome v.74+</li>
+								<li>Internet Explorer v.11+</li>
+							</ul>
+							<h6 class="my-0 text-danger">Does not run on older version of IE</h6>
+							<h6 class="my-0 text-danger">Advised to run in CHROME BROWSER</h6>
+
+							<hr>
+
+							<h3>GETTING STARTED</h3>
+
+							<div class="container-fluid border border-primary">
+
+								<p class="font-weight-bold">LDAP AUTHENTICATION</p>
+
+								<p class="my-0">LOCAL:</p>
+								<ul>
+									<li>To get logged in user information, use the <code>getenv()</code> function when testing locally.</li>
+									<mark class="ml-5"><code>$user = getenv("USERNAME")</code></mark>
+									
+								</ul>
+
+								<p>IIS/PRODUCTION:</p>
+								<ul>
+									<li>Use the <code>$_SERVER</code> functions to get users connecting to the sytstem</li>
+									<mark class="ml-5"><code>$user = $_SERVER['AUTH_USER']</code></mark>
+									
+									<li>Make sure to disable <em>Anonymous Authentication</em> on Production Server and enable <em>Windows Authentication</em></li>
+								</ul>
+								
+							</div>
+
+							<div class="container-fluid border border-primary">
+
+								<p class="font-weight-bold">SWITCHING TO MAINTENANCE/ACTIVE MODE</p>
+								<p>Activate/Deactivate between AJAX calls</p>
+								<p>LIVE:<br>
+									<mark><code>
+										$(document).ready(function(){<br>
+										var auth = $('#auth').val();<br>
+										console.log(auth);<br>
+										setTimeout(function() {<br>
+										window.location.href = 'authenticate.php?auth=' + auth;<br>
+									}, 2000);<br>
+								});<br>
+							</code></mark>
+						</p>
+
+						<p>MAINTENANCE:<br>
+							<mark><code>
+								$(function(){<br>
+								var code = btoa(503);<br>
+								var description = btoa('Service Unavailable');<br>
+								var message = btoa('We are sorry. The system is currently down for maintenance');<br>
+								window.location.href = 'error?code=' + code + '&desc=' + description + '&message=' + message;<br> 
+							});
+						</code></mark>
+					</p>
+					<hr>
+				</div>
+				<small class="text-right">By: Anthony D. Ballug Jr.</small>
+
+
+			</div>
+			
+
+		</div>
+
+	</body>
+	</html>

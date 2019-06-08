@@ -1,0 +1,144 @@
+fieldset.border {
+	border: 1px groove #ddd !important;
+	padding: 0 1.4em 1.4em 1.4em !important;
+	margin: 0 0 1.5em 0 !important;
+	-webkit-box-shadow: 0px 0px 0px 0px #000;
+	box-shadow: 0px 0px 0px 0px #000;
+}
+
+legend.border{
+	font-size: 1.2em !important;
+	font-weight: bold !important;
+	text-align: left !important;
+	width: auto;
+	padding: 0 10px;
+	border-bottom: none;
+}
+
+fieldset.round {
+	border: 1px solid #ddd !important;
+	padding: 0 1.4em 1.4em 1.4em !important;
+	margin: 0 0 1.5em 0 !important;
+	-webkit-box-shadow: 0px 0px 0px 0px #000;
+	box-shadow: 0px 0px 0px 0px #000;
+	border-radius: 50%;
+}
+
+.bg-custom-dark-1{
+	background-color: #e1d9d9;
+}
+
+.bg-moog {
+	/*background-color: #580e0c !important;*/
+	/*background-color: #751b26 !important;*/
+	background-color: #98012e !important;
+}
+
+.bg-black {
+	background-color: black !important;
+}
+
+.text-moog {
+	color: #580e0c !important;
+}
+
+.nav-tabs > .nav-item > .active{
+	background-color:#580e0c !important;
+	border-radius: 0px;
+}
+
+button.dash-icon-btn{
+	font-weight: bolder;
+	font-size: 12em;
+}
+
+.border-flat{
+	border-radius: 0 !important;
+	border-color: rgba(0,0,0, .7);
+	border-width: 1px;
+}
+
+#loader{
+	position: fixed;
+	z-index: 999;
+	height: 100px;
+	width: 100px;
+	overflow: visible;
+	margin: 0 auto !important;
+	top: 50%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.active-request{
+	max-height: 70% !important;
+	min-height: 40% !important;
+	overflow: auto;
+}
+
+.custom-input-1 {
+	border-color: rgba(0,0,0,.4);
+	border-width: 1px;
+	border-style: solid;
+}
+
+#logsColumn{
+	max-height: 300px;
+	overflow: auto;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+#messages-view{
+	max-height: 300px;
+	overflow:auto;
+}
+
+.lds-hourglass {
+	display: inline-block;
+	position: relative;
+	width: 64px;
+	height: 64px;
+}
+.lds-hourglass:after {
+	content: " ";
+	display: block;
+	border-radius: 50%;
+	width: 0;
+	height: 0;
+	margin: 6px;
+	box-sizing: border-box;
+	border: 26px solid #fff;
+	border-color: #98012e transparent #98012e transparent;
+	animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+	0% {
+		transform: rotate(0);
+		animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	}
+	50% {
+		transform: rotate(900deg);
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	100% {
+		transform: rotate(1800deg);
+	}
+}
+
+@media print {
+	@page { margin: 50px; }
+	body { margin: 1.6cm; }
+}
+
+@media print {
+	canvas.chart-canvas {
+		min-height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		height: auto!important;
+		width: auto!important;
+	}
+}
+
