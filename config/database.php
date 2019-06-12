@@ -7,9 +7,9 @@ class Database{
     
     public function getConnection(){
         
-        $host = "SQLEXPRESS";
-        $username = "sa";
-        $password = "password";
+        $host = "ANTHONY\SQLEXPRESS"; 
+        $username = "sa"; 
+        $password = "jampong19"; 
         $db_name = "prq";
         
         // $host = "localhost";

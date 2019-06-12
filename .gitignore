@@ -1,7 +1,6 @@
-/.env
 /assets/* 
 /playground.php
 /db.php
-
+config/database.php
 
 !/assets/custom
