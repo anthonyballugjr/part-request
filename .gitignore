@@ -1,6 +1,12 @@
-/assets/
+assets/bootstrap/*
+assets/charts/*
+assets/fontawesome-free/*
+assets/jquery/*
+assets/moment/*
+assets/popper/*
+assets/select2/*
 /playground.php
 /db.php
 /config/database.php
 
-!/assets/custom
+!assets/custom
