@@ -11,6 +11,7 @@
 * [DataTables](https://datatables.net/download/#dt/jszip-2.5.0/dt-1.10.18/b-1.5.4/b-html5-1.5.4/b-print-1.5.4)
 * [Font Awesome](https://fontawesome.com/)
 * [Select2](https://select2.org/)
+* [FPDF](http://www.fpdf.org/)
 
 ## Database Server
 * [MS SQL SERVER](https://www.microsoft.com/en-us/sql-server/sql-server-2017)

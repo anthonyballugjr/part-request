@@ -1,6 +1,6 @@
-/assets/* 
+/assets/
 /playground.php
 /db.php
-config/database.php
+/config/database.php
 
 !/assets/custom
