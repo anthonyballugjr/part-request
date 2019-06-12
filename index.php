@@ -12,6 +12,7 @@ $auth = "riemann";
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Parts Replacement</title>
 	<meta name="author" content="Anthony D. Ballug Jr.">
@@ -21,6 +22,7 @@ $auth = "riemann";
 	<script src="assets/popper/1.14.7/popper.min.js"></script>
 	<link rel="stylesheet" href="assets/bootstrap/4.3.1/css/bootstrap.css" type="text/css">
 </head>
+
 <body>
 
 	<style>
@@ -30,6 +32,7 @@ $auth = "riemann";
 			width: 64px;
 			height: 64px;
 		}
+
 		.lds-hourglass:after {
 			content: " ";
 			display: block;
@@ -42,6 +45,7 @@ $auth = "riemann";
 			border-color: #98012e transparent #98012e transparent;
 			animation: lds-hourglass 1.2s infinite;
 		}
+
 		@keyframes lds-hourglass {
 			0% {
 				transform: rotate(0);
@@ -64,14 +68,16 @@ $auth = "riemann";
 
 			<input id="auth" type="hidden" class="form-control" value="<?php echo $auth;?>">
 
-			<div class="container mx-auto" >
-				<img class="mx-auto d-block" src="res/prrp.png"> 
+			<div class="container mx-auto">
+				<img class="mx-auto d-block" src="res/prrp.png">
 				<h4 style="color: #98021e;" align="center">Parts Replacement Request</h4>
 			</div>
 
 			<div class="mx-auto py-3">
 				<h2 align="center">Authenticating...</h2>
-				<h3 align="center"><?php echo $auth;?></h3>
+				<h3 align="center">
+					<?php echo $auth;?>
+				</h3>
 				<div class="lds-hourglass mx-auto d-block"></div>
 			</div>
 
@@ -80,7 +86,7 @@ $auth = "riemann";
 
 	<script>
 		//PROD/LIVE
-		$(document).ready(function(){
+		$(document).ready(function() {
 			var auth = $('#auth').val();
 
 			console.log(auth);
@@ -100,8 +106,5 @@ $auth = "riemann";
 	</script>
 
 </body>
+
 </html>
-
-
-
-
