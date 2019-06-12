@@ -50,7 +50,9 @@ include_once "../includes/nav.php";
 	<div class="container-fluid" id="x">
 
 		<div class="card border-primary mb-3" style="max-width: 60rem;margin:0 auto;">
-			<div class="card-header bg-moog text-white"><h4>REQUEST FORM</h4></div>
+			<div class="card-header bg-moog text-white">
+				<h4>REQUEST FORM</h4>
+			</div>
 			<div class="card-body">
 
 				<?php echo displayError();?>
@@ -61,8 +63,10 @@ include_once "../includes/nav.php";
 						<div class="form-row form-group">
 							<div class="col-sm">
 								<label>Full Name</label>
-								<input name="samaccount" type="hidden" class="form-control form-control-sm" value="<?php echo $_SESSION['user'][0]['uid'][0];?>" readonly>
-								<input name="requestorName" type="text" class="form-control form-control-sm" value="<?php echo $_SESSION['user'][0]['cn'][0];?>" readonly>
+								<input name="samaccount" type="hidden" class="form-control form-control-sm" value="<?php echo $_SESSION['user'][0]['uid'][0];?>"
+								 readonly>
+								<input name="requestorName" type="text" class="form-control form-control-sm" value="<?php echo $_SESSION['user'][0]['cn'][0];?>"
+								 readonly>
 							</div>
 							<div class="col-sm">
 								<label>Work Center</label>
@@ -71,7 +75,8 @@ include_once "../includes/nav.php";
 							</div>
 							<div class="col-sm">
 								<label>Contact Number</label>
-								<input type="text" name="contactNo" class="form-control form-control-sm" style="border: solid rgba(0,0,0,.4) 1px;" required autofocus>
+								<input type="text" name="contactNo" class="form-control form-control-sm" style="border: solid rgba(0,0,0,.4) 1px;" required
+								 autofocus>
 							</div>
 						</div>
 					</fieldset>
@@ -128,7 +133,7 @@ include_once "../includes/nav.php";
 				url: "dynamicForm.php",
 				method: "POST",
 				data: {
-					type: type,r
+					type: type
 				},
 				success: function(data) {
 					$('#dynamicDiv').html(data);
@@ -137,4 +142,3 @@ include_once "../includes/nav.php";
 		});
 
 	</script>
-
